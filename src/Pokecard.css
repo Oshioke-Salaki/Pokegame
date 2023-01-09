@@ -5,13 +5,16 @@
   background: #d3d3d3;
   padding: 15px 0;
   border-radius: 15px;
-  width: 190px;
+  width: 300px;
+  box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
+  margin: 1rem;
 }
 
 .card h1 {
   margin-bottom: 0;
-  font-size: 18px;
-  color: #1600ff;
+  font-size: 1.5rem;
+  /* color: #1600ff; */
+  font-weight: bold;
 }
 
 .card img {
@@ -21,4 +24,21 @@
 
 .card-details {
   margin-top: -20px;
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  background-color: #eceff1;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.card img {
+  transition: all ease 500ms;
+}
+.card img:hover {
+  transform: scale(1.25);
 }

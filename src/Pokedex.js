@@ -4,11 +4,15 @@ import Pokecard from "./Pokecard";
 class Pokedex extends Component {
   render() {
     const styleWinner = {
-      color: "green"
+      color: "#4caf50",
+      marginTop: "10px",
+      marginBottom: "10px",
     };
 
     const styleLoser = {
-      color: "red"
+      color: "#e91e63",
+      marginTop: "10px",
+      marginBottom: "10px",
     };
     return (
       <div
@@ -16,27 +20,29 @@ class Pokedex extends Component {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          marginBottom: "30px"
+          marginBottom: "30px",
         }}
       >
         {this.props.iswinner ? (
-          <h1 style={styleWinner}>winner with a score of {this.props.total}</h1>
+          <h1 style={styleWinner}>winning Hand</h1>
         ) : (
-          <h1 style={styleLoser}>Loser with a score of {this.props.total}</h1>
+          <h1 style={styleLoser}>Losing Hand</h1>
         )}
+        <h4 style={{ marginBottom: "25px", marginTop: "0" }}>
+          Total Experience: {this.props.total}
+        </h4>
         <div
           style={{
             display: "flex",
             flexWrap: "wrap",
-            gap: "10px"
           }}
         >
-          {this.props.pokemons.map((cur) => (
+          {this.props.pokemon.map((p) => (
             <Pokecard
-              name={cur.name}
-              id={cur.id}
-              type={cur.type}
-              exp={cur.base_experience}
+              name={p.name}
+              id={p.id}
+              type={p.type}
+              exp={p.base_experience}
             />
           ))}
         </div>
