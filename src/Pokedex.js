@@ -35,6 +35,7 @@ class Pokedex extends Component {
           style={{
             display: "flex",
             flexWrap: "wrap",
+            justifyContent: "center",
           }}
         >
           {this.props.pokemon.map((p) => (
